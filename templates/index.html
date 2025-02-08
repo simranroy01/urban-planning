@@ -4,18 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Planning Map</title>
+    
     <link rel="stylesheet" href="/static/styles.css">
+    
+    <!-- Leaflet for Maps -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css">
+    
+    <!-- Plotly for Graphs -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <h1>Urban Planning Interactive Map</h1>
+
+    <!-- Interactive Map -->
     <div id="map"></div>
+
+    <!-- Land Cover Image -->
     <h3>Land Cover</h3>
     <img id="landcover_img" src="" alt="Land Cover">
+
+    <!-- Graphs -->
+    <h3>Population Over Time</h3>
+    <div id="pop-graph"></div>
+
+    <h3>Population Change (%)</h3>
+    <div id="pop-change-graph"></div>
+
+    <h3>Built-Up Area Over Time</h3>
+    <div id="built-area-graph"></div>
+
+    <h3>Built-Up Area Change (%)</h3>
+    <div id="built-change-graph"></div>
+
+    <!-- JavaScript -->
     <script src="/static/script.js"></script>
 </body>
 </html>
+
 

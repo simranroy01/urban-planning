@@ -1,16 +1,54 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
+
+/* Map styling */
 #map {
     width: 80%;
     height: 500px;
-    margin: auto;
+    margin: 20px auto;
     border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Land cover image styling */
 img {
     width: 80%;
     margin-top: 10px;
     border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Graph container styling */
+#pop-graph, #pop-change-graph, 
+#built-area-graph, #built-change-graph {
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1, h3 {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #map, img, #pop-graph, #pop-change-graph, 
+    #built-area-graph, #built-change-graph {
+        width: 95%;
+    }
+}
+
 
