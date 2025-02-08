@@ -43,13 +43,17 @@ map.on(L.Draw.Event.CREATED, function (event) {
     .then(response => response.json())
     .then(data => {
         console.log("API Response:", data);
-        document.getElementById('landcover_img').src = data.landcover;
-        document.getElementById('pop_graph').src = data.pop_graph;
-        document.getElementById('built_graph').src = data.built_graph;
+
+        if (data.error) {
+            console.error("Server Error:", data.error);
+            alert("Error: " + data.error);
+            return;
+        }
+
+        document.getElementById('landcover_img').src = `http://127.0.0.1:8000/${data.landcover}`;
     })
     .catch(error => {
         console.error("Fetch Error:", error);
+        alert("Failed to communicate with the server. Check the console for details.");
     });
 });
-
-
